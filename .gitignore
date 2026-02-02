@@ -1,0 +1,23 @@
+# Cache and transient data
+cache/
+debug/
+file-history/
+paste-cache/
+plans/
+session-env/
+shell-snapshots/
+statsig/
+tasks/
+telemetry/
+todos/
+
+# Session data
+history.jsonl
+stats-cache.json
+
+# Keep these:
+# - CLAUDE.md
+# - settings.json
+# - skills/
+# - plugins/
+# - projects/
