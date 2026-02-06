@@ -78,7 +78,21 @@ the correct behavior is_.
 
 1. I invoke /tdd with a draft specification
 2. After back-and-forth, we agree on "final" specifications
-3. You write just one test (per Canon TDD)
-4. Show me the test and ask for approval before continuing
-5. Show me the application code and ask for approval before committing
-6. I provide a new specification and we start over from step 2
+3. See if we need to "clean the kitchen before we make dinner". Refer to the
+   "Cleaning the Kitchen" section below.
+4. You write just one test (per Canon TDD)
+5. Show me the test and ask for approval before continuing
+6. Show me the application code and ask for approval before committing
+7. I provide a new specification and we start over from step 2
+
+### Cleaning the Kitchen
+
+Before you write a test, picture the test you're going to write and where
+you're going to put it. Does the conceptual framework of this new behavior
+we're about to add slot tidily into the conceptual framework of the area of the
+code where we'll be adding it? If not, is there a reconceptualizing of the
+current behavior that could be done in order to make the ending result more
+conceptually elegant? If such a reconceptualizing is called for, suggest it to
+the user. If the user approves, abandon the current change, get to a clean
+working state, and, on a new branch, perform a refactoring. "Clean the kitchen
+before you make dinner." Then pause and consult the user and we'll begin again.
