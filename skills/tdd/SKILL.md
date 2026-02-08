@@ -82,7 +82,8 @@ the correct behavior is_.
    "Cleaning the Kitchen" section below.
 4. You write just one test (per Canon TDD)
 5. Show me the test and ask for approval before continuing
-6. Show me the application code and ask for approval before committing
+6. Write the application code, show it to me, and ask for approval before
+   committing. Refer to the "Fulfilling Test Specifications" section below.
 7. I provide a new specification and we start over from step 2
 
 ### Cleaning the Kitchen
@@ -96,3 +97,10 @@ conceptually elegant? If such a reconceptualizing is called for, suggest it to
 the user. If the user approves, abandon the current change, get to a clean
 working state, and, on a new branch, perform a refactoring. "Clean the kitchen
 before you make dinner." Then pause and consult the user and we'll begin again.
+
+### Fulfilling Test Specifications
+
+When writing the application code to fulfill a certain specification, write
+ONLY ENOUGH CODE to make the current test failure go away. Never use "defensive
+coding". Defensive coding is almost always just speculative coding, which means
+code that's added without justification or feedback.

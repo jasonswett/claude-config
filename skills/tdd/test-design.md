@@ -16,6 +16,50 @@ Bad: "It works correctly." (What does 'correctly' mean?)
 Bad: "It handles errors." (Which errors? How?)
 Bad: "It validates input." (What validation? What happens on failure?)
 
+## Test Behavior, Not Implementation Details
+
+Bad:
+```rust
+#[cfg(test)]                                                                                                                                                                               
+mod tests {                                                                                                                                                                                
+    use super::*;
+                                                                                                                                                                                           
+    mod tick {                                                                              
+        use super::*;                                                                                                                                                                      
+                                                                                                                                                                                           
+        #[test]                                                                                                                                                                            
+        fn marks_the_particles_position_blue() {                                        
+            let mut world = World::new(10, 10);
+
+            world.tick();                                                                   
+
+            assert_eq!(world.color_at(5, 0), 0x0000FF);
+        }        
+    }
+}
+```
+
+  Good:
+```rust
+mod when_a_particle_touches_a_grid_cell {
+    use super::*;
+
+    #[test]
+    fn the_cell_turns_the_particles_color() {
+        let mut world = World::new(10, 10);
+        let particle_color = world.particle_color();
+        let particle_position = world.particle_position();
+
+        world.tick();
+
+        assert_eq!(
+            world.color_at(particle_position.0, particle_position.1),
+            particle_color
+        );
+    }
+}
+```
+
 ## When Capturing Scenarios, Describe the Essence 
 
 Bad:
