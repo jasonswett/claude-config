@@ -15,9 +15,13 @@ todos/
 history.jsonl
 stats-cache.json
 
+# Plugins (installable from marketplaces)
+plugins/
+
+# Project session transcripts and cache
+projects/
+
 # Keep these:
 # - CLAUDE.md
 # - settings.json
 # - skills/
-# - plugins/
-# - projects/
