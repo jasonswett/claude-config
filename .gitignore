@@ -21,6 +21,14 @@ plugins/
 # Project session transcripts and cache
 projects/
 
+# Credentials and secrets
+.env
+*credentials*.json
+
+# Backups and legacy
+backups/
+commands/
+
 # Keep these:
 # - CLAUDE.md
 # - settings.json
