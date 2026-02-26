@@ -40,6 +40,10 @@ Another consistency example:
 Bad: `data-terminal-output-delay-value="<%= DOM_RENDER_DELAY_IN_MILLISECONDS %>">`
 Good: `data-terminal-output-dom-render-delay-value="<%= DOM_RENDER_DELAY_IN_MILLISECONDS %>"`
 
+## Testing
+
+When writing tests, consult the Professional Rails Testing reference in memory/professional-rails-testing/ for guidance on approach and style.
+
 ## Git Usage
 
 Always commit using full sentences with a period at the end.
